@@ -6,9 +6,10 @@
 Imports Microsoft.AspNetCore.Hosting
 Imports Microsoft.Extensions.Hosting
 
-Module Program
-    Sub Main(args As String())
-        CreateHostBuilder(args).Build().Run()
+Public Module Program
+    Public Sub Main(args As String())
+        Dim app = CreateHostBuilder(args).Build()
+        app.Run()
     End Sub
 
     Public Function CreateHostBuilder(args As String()) As IHostBuilder

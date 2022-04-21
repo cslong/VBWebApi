@@ -1,15 +1,19 @@
-﻿Imports System.Net
-Imports System.Web.Http
+﻿Imports RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute
+Imports Microsoft.AspNetCore.Mvc
 
+<ApiController()>
+<Route("api/[controller]/[action]")>
 Public Class ValuesController
     Inherits Microsoft.AspNetCore.Mvc.ControllerBase
 
     ' GET api/values
+    <HttpGet()>
     Public Function GetValues() As IEnumerable(Of String)
         Return New String() {"value1", "value2"}
     End Function
 
     ' GET api/values/5
+    <HttpGet("{id}")>
     Public Function GetValue(ByVal id As Integer) As String
         Return "value"
     End Function

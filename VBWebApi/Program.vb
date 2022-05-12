@@ -8,8 +8,7 @@ Imports Microsoft.Extensions.Hosting
 
 Public Module Program
     Public Sub Main(args As String())
-        Dim app = CreateHostBuilder(args).Build()
-        app.Run()
+        CreateHostBuilder(args).Build().Run()
     End Sub
 
     Public Function CreateHostBuilder(args As String()) As IHostBuilder
